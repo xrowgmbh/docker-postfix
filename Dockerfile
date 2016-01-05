@@ -4,7 +4,7 @@ MAINTAINER "Björn Dieding" <bjoern@xrow.de>
 
 ENV container=docker
 
-RUN yum -y install postfix; yum clean all; systemctl enable postfix.service
+RUN yum -y install postfix; yum clean all; systemctl enable postfix
 
 EXPOSE 25
 
