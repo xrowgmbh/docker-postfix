@@ -17,4 +17,4 @@ RUN chmod 755 /postfix.sh
 EXPOSE 25
 
 #CMD [ "/usr/sbin/init" ]
-CMD [ "sh", "-c", "/postfix.sh", "&&", "/usr/sbin/init" ]
+CMD sh /postfix.sh;/usr/sbin/init
