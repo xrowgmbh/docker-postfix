@@ -11,6 +11,7 @@ ENV term=xterm
 
 RUN yum -y install postfix; yum clean all; systemctl enable postfix
 RUN postconf -e 'mynetworks = 127.0.0.1/32 192.168.0.0/16 172.16.0.0/12 10.0.0.0/8'
+RUN postconf -e 'mynetworks_style = class'
 
 ADD postfix.sh /postfix.sh
 RUN chmod 755 /postfix.sh
